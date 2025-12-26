@@ -16,7 +16,7 @@ function updateScore() {
   scoreText.textContent = `Human score: ${humanScore} Computer score: ${computerScore}`;
 }
 
-function playRound(humanChoice, computerChoice) {
+function playGame(humanChoice, computerChoice) {
   if (humanScore === 5 || computerScore === 5) {
     return;
   }
@@ -86,6 +86,6 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    playRound(button.id, getComputerChoice());
+    playGame(button.id, getComputerChoice());
   });
 });
